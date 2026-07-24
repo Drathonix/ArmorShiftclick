@@ -6,7 +6,7 @@
     "authors": [
         "Drathon"
     ],
-    "description": "To be added",
+    "description": "Makes shift clicking items into the character inventory possible.",
     "version": "1.0.0",
     "dependencies": {
         "game": "1.22.5"
