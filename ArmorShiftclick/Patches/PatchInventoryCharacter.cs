@@ -17,10 +17,10 @@ public class PatchInventoryCharacter
     {
         foreach (var slot in __instance)
         {
-            if(slot != null && sourceSlot != slot && slot.CanHold(sourceSlot))
+            if(slot != null && slot.Empty && sourceSlot != slot && slot.CanHold(sourceSlot))
             {
                 __result.slot = slot;
-                __result.weight = float.MaxValue;
+                __result.weight = 1;
                 return;
             }
         }
