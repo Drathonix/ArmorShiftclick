@@ -20,7 +20,7 @@ public class PatchInventoryCharacter
             if(slot != null && slot.Empty && sourceSlot != slot && slot.CanHold(sourceSlot))
             {
                 __result.slot = slot;
-                __result.weight = 1;
+                __result.weight = 3;
                 return;
             }
         }

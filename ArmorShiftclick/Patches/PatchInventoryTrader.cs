@@ -13,7 +13,6 @@ public class PatchInventoryTrader
 {
     public static void Postfix(InventoryTrader __instance)
     {
-        Console.WriteLine("X X");
         Traverse.Create(__instance).Field("baseWeight").SetValue(3f);
     }
 }
