@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using HarmonyLib;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Util;
 using Vintagestory.Common;
 using Vintagestory.Server;
@@ -19,9 +20,12 @@ public class PatchInventoryCharacter
         {
             if(slot != null && slot.Empty && sourceSlot != slot && slot.CanHold(sourceSlot))
             {
-                __result.slot = slot;
-                __result.weight = 3;
-                return;
+                if (sourceSlot.Itemstack != null && sourceSlot.Itemstack.Collectible.GetTemperature(op.World, sourceSlot.Itemstack) < GlobalConstants.TooHotToTouchTemperature)
+                {
+                    __result.slot = slot;
+                    __result.weight = 3;
+                    return;
+                }
             }
         }
     }

@@ -7,8 +7,8 @@
         "Drathon"
     ],
     "description": "Makes shift clicking items into the character inventory (and others) possible.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "dependencies": {
-        "game": "1.22.1"
+        "game": "1.22.0"
     }
 }
